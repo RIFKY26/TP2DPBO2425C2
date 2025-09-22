@@ -1,3 +1,5 @@
+<img width="532" height="508" alt="image" src="https://github.com/user-attachments/assets/4b19ad64-64c0-496e-a000-4fbcd7db9df5" />
+
 1. Produk (Base Class)
 Mengapa harus dibuat:
 Kelas Produk adalah superclass atau kelas dasar yang menyimpan informasi umum yang berlaku untuk semua produk elektronik yang ada di toko. Semua produk elektronik, baik itu portabel atau statis, akan memiliki atribut dasar yang sama seperti ID produk, nama produk, merk, harga, stok, dan gambar.
