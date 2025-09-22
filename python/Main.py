@@ -7,6 +7,10 @@ def is_id_exist(produk_list, id):
             return True
     return False
 
+def display_table():
+    """Fungsi untuk menampilkan header tabel"""
+    print(f"{'ID':<5} {'Nama Produk':<20} {'Harga':<10} {'Stok':<5} {'GambarPath':<15} {'Kategori Produk':<20} {'Deskripsi Produk':<50} {'Durasi Baterai':<15} {'Berat':<10} {'Tipe Koneksi':<10}")
+
 def main():
     produk_list = []
 
@@ -18,35 +22,55 @@ def main():
     produk_list.append(ElektronikPortable(5, "Power Bank", 300000, 30, "path5.jpg", "Aksesoris", "Power bank kapasitas 10.000 mAh", "24 jam", 200, "USB"))
 
     # Menampilkan tabel produk awal dengan format yang lebih rapi
-    print(f"{'ID':<5} {'Nama Produk':<20} {'Harga':<10} {'Stok':<5} {'GambarPath':<15} {'Kategori Produk':<20} {'Deskripsi Produk':<50} {'Durasi Baterai':<15} {'Berat':<10} {'Tipe Koneksi':<10}")
+    print("\n=== DAFTAR PRODUK ELEKTRONIK PORTABLE ===")
+    display_table()
     for produk in produk_list:
         produk.display()
 
-    # Input produk baru dari pengguna
-    id = int(input("\nTambah Produk Baru:\nMasukkan ID: "))
+    # Menu loop untuk menambahkan produk
+    while True:
+        print("\n=== MENU UTAMA ===")
+        print("1. Tambah Produk Baru")
+        print("2. Tampilkan Semua Produk")
+        print("3. Keluar")
+        pilihan = input("Pilih menu (1/2/3): ")
 
-    # Memeriksa apakah ID sudah ada
-    if is_id_exist(produk_list, id):
-        print("ID sudah ada! Gagal menambahkan produk baru.")
-    else:
-        Nama_produk = input("Masukkan Nama Produk: ")
-        Harga = float(input("Masukkan Harga: "))
-        Stok = int(input("Masukkan Stok: "))
-        GambarPath = input("Masukkan Gambar Path: ")
-        Kategori_produk = input("Masukkan Kategori Produk: ")
-        Deskripsi_produk = input("Masukkan Deskripsi Produk: ")
-        Durasi_baterai = input("Masukkan Durasi Baterai: ")
-        Berat = float(input("Masukkan Berat: "))
-        Tipe_koneksi = input("Masukkan Tipe Koneksi: ")
+        if pilihan == '1':
+            print("\n=== TAMBAH PRODUK BARU ===")
+            # Input produk baru dari pengguna
+            id = int(input("Masukkan ID: "))
 
-        # Menambahkan produk baru ke dalam daftar
-        produk_list.append(ElektronikPortable(id, Nama_produk, Harga, Stok, GambarPath, Kategori_produk, Deskripsi_produk, Durasi_baterai, Berat, Tipe_koneksi))
+            # Memeriksa apakah ID sudah ada
+            if is_id_exist(produk_list, id):
+                print("ID sudah ada! Gagal menambahkan produk baru.")
+            else:
+                Nama_produk = input("Masukkan Nama Produk: ")
+                Harga = float(input("Masukkan Harga: "))
+                Stok = int(input("Masukkan Stok: "))
+                GambarPath = input("Masukkan Gambar Path: ")
+                Kategori_produk = input("Masukkan Kategori Produk: ")
+                Deskripsi_produk = input("Masukkan Deskripsi Produk: ")
+                Durasi_baterai = input("Masukkan Durasi Baterai: ")
+                Berat = float(input("Masukkan Berat: "))
+                Tipe_koneksi = input("Masukkan Tipe Koneksi: ")
 
-        # Menampilkan tabel produk setelah ditambah
-        print("\nDaftar Produk Terbaru:")
-        print(f"{'ID':<5} {'Nama Produk':<20} {'Harga':<10} {'Stok':<5} {'GambarPath':<15} {'Kategori Produk':<20} {'Deskripsi Produk':<50} {'Durasi Baterai':<15} {'Berat':<10} {'Tipe Koneksi':<10}")
-        for produk in produk_list:
-            produk.display()
+                # Menambahkan produk baru ke dalam daftar
+                produk_list.append(ElektronikPortable(id, Nama_produk, Harga, Stok, GambarPath, Kategori_produk, Deskripsi_produk, Durasi_baterai, Berat, Tipe_koneksi))
+
+                print("\nProduk berhasil ditambahkan!")
+
+        elif pilihan == '2':
+            print("\n=== DAFTAR SEMUA PRODUK ===")
+            display_table()
+            for produk in produk_list:
+                produk.display()
+
+        elif pilihan == '3':
+            print("Terima kasih! Program selesai.")
+            break
+
+        else:
+            print("Pilihan tidak valid! Silakan pilih 1, 2, atau 3.")
 
 if __name__ == "__main__":
     main()
