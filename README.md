@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Toko Elektronik - Program OOP Multilevel Inheritance
 
 ## janji
@@ -64,6 +63,3 @@ Kelas **ElektronikPortabel** adalah kelas turunan dari **Elektronik** dan menamb
 1. **Input Data**: Program dimulai dengan menyimpan **5 objek awal** produk secara **hardcoded** dalam sistem. Kemudian, pengguna dapat menambahkan data produk lain menggunakan input yang diterima dari pengguna.
 2. **Penyimpanan Data**: Data produk yang dimasukkan akan disimpan dalam objek sesuai kelasnya (misalnya objek produk portabel disimpan dalam objek **ElektronikPortabel**).
 3. **Output Data**: Semua data produk, baik yang dimasukkan melalui input maupun yang sudah ada di awal, akan ditampilkan dalam **tabel dinamis** yang mencakup seluruh atribut dari setiap kelas.
-=======
-belom ges
->>>>>>> aa6b36a7d5378234d62cfb3ccaeb11134674cdf6
