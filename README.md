@@ -1,4 +1,4 @@
-<img width="532" height="508" alt="image" src="https://github.com/user-attachments/assets/4b19ad64-64c0-496e-a000-4fbcd7db9df5" />
+ <img width="532" height="508" alt="image" src="https://github.com/user-attachments/assets/4b19ad64-64c0-496e-a000-4fbcd7db9df5" />
 
 1. Produk (Base Class)
 Mengapa harus dibuat:
