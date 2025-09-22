@@ -1,19 +1,16 @@
-// Elektronik.java
 public class Elektronik extends Produk {
-    String deskripsi;
-    String kategori;
+    protected String Kategori_produk;
+    protected String Deskripsi_produk;
 
-    // Constructor
-    public Elektronik(int id, String namaProduk, String merk, float harga, int stok, String gambarPath, String deskripsi, String kategori) {
-        super(id, namaProduk, merk, harga, stok, gambarPath);
-        this.deskripsi = deskripsi;
-        this.kategori = kategori;
+    public Elektronik(int id, String Nama_produk, float Harga, int Stok, String GambarPath, String Kategori_produk, String Deskripsi_produk) {
+        super(id, Nama_produk, Harga, Stok, GambarPath);
+        this.Kategori_produk = Kategori_produk;
+        this.Deskripsi_produk = Deskripsi_produk;
     }
 
-    // Override method display() untuk menampilkan lebih banyak informasi
     @Override
     public void display() {
-        super.display(); // Menampilkan data dari Produk
-        System.out.printf("Deskripsi: %-50s Kategori: %-20s\n", deskripsi, kategori);
+        super.display();
+        System.out.printf(" %-20s %-50s", Kategori_produk, Deskripsi_produk);
     }
 }

@@ -1,24 +1,23 @@
-// Produk.java
 public class Produk {
-    int id;
-    String namaProduk;
-    String merk;
-    float harga;
-    int stok;
-    String gambarPath;
+    protected int id;
+    protected String Nama_produk;
+    protected float Harga;
+    protected int Stok;
+    protected String GambarPath;
 
-    // Constructor
-    public Produk(int id, String namaProduk, String merk, float harga, int stok, String gambarPath) {
+    public Produk(int id, String Nama_produk, float Harga, int Stok, String GambarPath) {
         this.id = id;
-        this.namaProduk = namaProduk;
-        this.merk = merk;
-        this.harga = harga;
-        this.stok = stok;
-        this.gambarPath = gambarPath;
+        this.Nama_produk = Nama_produk;
+        this.Harga = Harga;
+        this.Stok = Stok;
+        this.GambarPath = GambarPath;
     }
 
-    // Method untuk menampilkan data produk (hanya data dasar)
     public void display() {
-        System.out.printf("%-10d %-20s %-15s Rp. %-10.2f %-5d %-20s\n", id, namaProduk, merk, harga, stok, gambarPath);
+        System.out.printf("%-5d %-20s %-10.2f %-5d %-15s", id, Nama_produk, Harga, Stok, GambarPath);
+    }
+
+    public int getid() {
+        return id;
     }
 }
