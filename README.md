@@ -1,44 +1,65 @@
-1. Produk (Base Class)
-Mengapa harus dibuat:
-Kelas Produk adalah superclass atau kelas dasar yang menyimpan informasi umum yang berlaku untuk semua produk elektronik yang ada di toko. Semua produk elektronik, baik itu portabel atau statis, akan memiliki atribut dasar yang sama seperti ID produk, nama produk, merk, harga, stok, dan gambar.
-Atribut pada Produk:
-•	id: Setiap produk memerlukan ID unik agar bisa dibedakan satu sama lain, baik untuk penjualan, stok, atau pengelolaan data.
-•	namaProduk: Nama produk untuk mempermudah pengidentifikasian dan pencarian produk.
-•	merk: Merek atau brand dari produk, memberikan informasi lebih lanjut terkait kualitas dan kepercayaan konsumen terhadap produk tersebut.
-•	harga: Harga produk yang sangat penting dalam proses penjualan dan manajemen stok.
-•	stok: Informasi tentang ketersediaan produk yang ada di toko, untuk mengatur jumlah yang ada di gudang dan untuk memantau permintaan produk.
-•	gambarPath: Menyimpan path ke gambar produk agar pengguna bisa melihat representasi visual dari produk tersebut.
-Kenapa Atribut Ini Penting:
-•	Atribut-atribut tersebut esensial dan universal untuk semua produk elektronik, sehingga kita menaruhnya di kelas dasar Produk. Dengan cara ini, kita bisa menghindari pengulangan atribut yang sama di setiap kelas turunan dan mempermudah pengelolaan produk secara keseluruhan.
+# Toko Elektronik - Program OOP Multilevel Inheritance
 
-2. ElektronikPortabel (Subclass dari Produk)
-Mengapa harus dibuat:
-Produk portabel memiliki karakteristik yang membedakannya dengan produk statis. ElektronikPortabel adalah subclass yang mewarisi atribut umum dari Produk, namun menambahkan atribut khusus yang relevan dengan produk yang dapat dipindahkan dan digunakan dalam berbagai situasi, seperti smartphone, laptop, dan kamera.
-Atribut pada ElektronikPortabel:
-•	durasiBaterai: Salah satu karakteristik penting dari produk portabel adalah daya tahan baterai, yang memberi pengguna informasi tentang seberapa lama perangkat dapat digunakan tanpa harus terhubung ke sumber listrik.
-•	berat: Berat perangkat sangat penting untuk portabilitas, dan membantu pengguna memutuskan apakah perangkat tersebut nyaman untuk dibawa kemana-mana.
-•	tipeKonektivitas: Untuk perangkat portabel seperti smartphone dan laptop, jenis konektivitas yang didukung (Wi-Fi, Bluetooth, NFC) sangat penting untuk mengetahui kemudahan perangkat dalam berinteraksi dengan perangkat lain.
-Kenapa Atribut Ini Penting:
-Atribut-atribut ini sangat relevan dan khusus untuk perangkat portabel. Misalnya, durasi baterai dan berat merupakan dua hal utama yang akan mempengaruhi keputusan konsumen ketika memilih produk portabel. Tanpa informasi tersebut, konsumen tidak bisa mengetahui seberapa praktis dan fungsional perangkat tersebut untuk kebutuhan mereka.
+## janji
+Saya nama Rifky Fadhillah Akbar dengan Nim 2401248 mengerjakan tugas praktikum 1
+dalam mata kuliah DPBO untuk keberkahan-Nya maka saya
+tidak akan melakukan kecurangan seperti yang telah di spesifikasikan Aamiin.
 
-3. ElektronikStatis (Subclass dari Produk)
-Mengapa harus dibuat:
-Produk elektronik statis seperti AC, kulkas, televisi, dan mesin cuci memiliki karakteristik yang sangat berbeda dari produk portabel. Oleh karena itu, kita membuat subclass ElektronikStatis yang mewarisi atribut dasar dari Produk, tetapi juga memiliki atribut tambahan yang spesifik untuk produk yang lebih besar, tidak portabel, dan memerlukan instalasi atau konsumsi daya tinggi.
-Atribut pada ElektronikStatis:
-•	konsumsiDaya: Produk seperti AC, kulkas, dan televisi sering kali memiliki konsumsi daya yang besar. Menghitung konsumsi daya sangat penting untuk memperkirakan biaya operasional dan efisiensi energi perangkat.
-•	dimensi: Karena produk elektronik statis biasanya lebih besar, dimensi fisik produk (panjang x lebar x tinggi) menjadi sangat penting. Informasi ini membantu konsumen menentukan apakah produk tersebut cocok dengan ruang yang tersedia di rumah atau kantor mereka.
-•	bahan: Untuk produk statis seperti televisi atau kulkas, bahan yang digunakan untuk konstruksi perangkat (misalnya plastik, logam, atau kaca) memberikan informasi tentang daya tahan dan kualitas produk. Bahan ini juga berpengaruh pada bobot dan desain estetika.
-Kenapa Atribut Ini Penting:
-Atribut-atribut ini sangat relevan untuk produk yang lebih besar dan tidak dapat dipindahkan. Konsumsi daya dan dimensi sangat mempengaruhi pilihan konsumen dalam membeli produk-produk ini. Misalnya, seseorang yang tinggal di apartemen kecil akan lebih memilih kulkas yang lebih kecil dan hemat energi.
 
-4. Konsep Multiple Inheritance di Sini
-Konsep multiple inheritance dapat digunakan jika kita ingin menggabungkan fitur tambahan (seperti Wi-Fi, Bluetooth, atau Smart features) ke dalam produk portabel maupun statis. Misalnya, kita bisa menggunakan Fitur sebagai kelas mix-in yang dapat digunakan untuk menambahkan atribut konektivitas pada produk, baik itu portabel maupun statis. Dengan demikian, produk seperti TV pintar atau smartphone bisa memiliki atribut tambahan seperti Wi-Fi, Bluetooth, dan Smart tanpa mengubah desain dasar kelas.
+Program ini menggunakan **3 kelas utama**:
+- **Produk** sebagai kelas dasar (base class)
+- **Elektronik** sebagai kelas perantara (intermediate class)
+- **ElektronikPortabel** sebagai kelas turunan (derived class)
 
-5. Manfaat dari Desain Ini:
-•	Modularitas: Setiap kategori produk (portabel atau statis) memiliki kelas yang terpisah, memudahkan pengelolaan dan perawatan kode. Kamu hanya perlu menambahkan atau mengubah fitur spesifik sesuai kebutuhan tanpa mempengaruhi bagian lain dari sistem.
-•	Fleksibilitas: Ketika kamu ingin menambah jenis produk baru (misalnya perangkat wearable atau perangkat rumah pintar), cukup tambahkan subclass baru yang mewarisi kelas Produk atau subclass lain sesuai dengan jenis produk.
-•	Keterbacaan dan Pemeliharaan Kode: Dengan pemisahan yang jelas antara produk portabel dan produk statis, serta kemampuan untuk menambahkan fitur menggunakan multiple inheritance, kode menjadi lebih mudah dibaca dan dipelihara.
+## Penjelasan Atribut dan Methods
 
-Kesimpulan
-Struktur kelas ini dibangun dengan prinsip abstraksi dan modularitas, yang memungkinkan aplikasi untuk dengan mudah mengelola berbagai jenis produk elektronik dan menambah fitur baru tanpa harus menulis ulang kode. Produk menyimpan atribut dasar yang berlaku untuk semua produk, sedangkan ElektronikPortabel dan ElektronikStatis menambah atribut spesifik untuk masing-masing kategori produk. Multiple inheritance memungkinkan kamu untuk menambahkan fitur tambahan tanpa duplikasi kode, menjadikannya lebih efisien dan terorganisir.
+### Kelas **Produk**
+Kelas **Produk** menyimpan atribut umum yang dimiliki oleh semua produk elektronik yang ada di toko. Atribut-atribut ini diwariskan ke kelas-kelas turunan seperti **Elektronik** dan **ElektronikPortabel**.
 
+#### Atribut:
+- **id**: ID unik untuk setiap produk.
+- **namaProduk**: Nama produk elektronik.
+- **merk**: Merek atau brand dari produk.
+- **harga**: Harga produk dalam satuan mata uang.
+- **stok**: Jumlah stok produk yang tersedia di toko.
+- **gambarPath**: Path atau lokasi gambar produk.
+
+#### Methods:
+- **display()**: Menampilkan informasi lengkap produk, termasuk id, nama, merk, harga, stok, dan gambarPath.
+
+### Kelas **Elektronik**
+Kelas **Elektronik** mewarisi atribut dari **Produk** dan menambahkan atribut umum yang lebih spesifik untuk kategori produk elektronik secara umum.
+
+#### Atribut yang diwarisi:
+- **id** (int)
+- **namaProduk** (string)
+- **merk** (string)
+- **harga** (float)
+- **stok** (int)
+- **gambarPath** (string)
+
+#### Atribut tambahan:
+- **deskripsi**: Deskripsi singkat tentang produk elektronik (misalnya, "Smartphone canggih dengan layar OLED dan kamera 108 MP").
+- **kategori**: Kategori produk (misalnya, "Gadget", "Peralatan Rumah Tangga", dll.).
+
+#### Methods:
+- **display()**: Menampilkan informasi produk elektronik secara umum.
+
+### Kelas **ElektronikPortabel**
+Kelas **ElektronikPortabel** adalah kelas turunan dari **Elektronik** dan menambahkan atribut khusus untuk produk yang bersifat **portabel** seperti ponsel, laptop, dan kamera.
+
+#### Atribut yang diwarisi:
+- **id**, **namaProduk**, **merk**, **harga**, **stok**, **gambarPath**, **deskripsi**, **kategori**
+
+#### Atribut tambahan:
+- **durasiBaterai**: Durasi penggunaan baterai perangkat dalam satuan jam.
+- **berat**: Berat perangkat dalam kilogram.
+- **tipeKonektivitas**: Jenis konektivitas yang didukung perangkat (misalnya **Wi-Fi**, **Bluetooth**, **NFC**).
+
+#### Methods:
+- **display()**: Menampilkan informasi lengkap produk portabel, termasuk durasi baterai, berat, dan tipe konektivitas.
+
+## Penjelasan Alur Program
+1. **Input Data**: Program dimulai dengan menyimpan **5 objek awal** produk secara **hardcoded** dalam sistem. Kemudian, pengguna dapat menambahkan data produk lain menggunakan input yang diterima dari pengguna.
+2. **Penyimpanan Data**: Data produk yang dimasukkan akan disimpan dalam objek sesuai kelasnya (misalnya objek produk portabel disimpan dalam objek **ElektronikPortabel**).
+3. **Output Data**: Semua data produk, baik yang dimasukkan melalui input maupun yang sudah ada di awal, akan ditampilkan dalam **tabel dinamis** yang mencakup seluruh atribut dari setiap kelas.

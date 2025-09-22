@@ -1,0 +1,5 @@
+Smartphone,5000000,10,Elektronik,Smartphone dengan layar besar dan kamera berkualitas tinggi
+Laptop,10000000,5,Elektronik,Laptop dengan prosesor Intel i7 dan RAM 16GB
+Kamera,7000000,7,Elektronik,Kamera DSLR dengan kualitas gambar 4K
+Smartwatch,2000000,15,Elektronik,Smartwatch untuk monitor kesehatan
+Earphone,500000,20,Elektronik,Earphone nirkabel dengan noise cancellation

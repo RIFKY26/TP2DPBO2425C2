@@ -1,0 +1,4 @@
+6
+"Smartwatch", 3000000, 12, "path6.jpg", "Aksesoris", "Smartwatch dengan fitur fitness", "48 jam", 50, "Bluetooth"
+7
+"TV 4K", 10000000, 8, "path7.jpg", "Elektronik", "Televisi UHD 4K", "5 jam", 8000, "HDMI"
