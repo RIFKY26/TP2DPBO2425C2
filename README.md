@@ -5,6 +5,7 @@ Saya nama Rifky Fadhillah Akbar dengan Nim 2401248 mengerjakan tugas praktikum 1
 dalam mata kuliah DPBO untuk keberkahan-Nya maka saya
 tidak akan melakukan kecurangan seperti yang telah di spesifikasikan Aamiin.
 
+<img width="198" height="527" alt="image" src="https://github.com/user-attachments/assets/6618a94e-6ebe-4da0-9f59-550dcf326dfe" />
 
 Program ini menggunakan **3 kelas utama**:
 - **Produk** sebagai kelas dasar (base class)
