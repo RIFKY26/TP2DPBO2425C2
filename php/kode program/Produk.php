@@ -1,11 +1,11 @@
 <?php
 
 class Produk {
-    protected $id;
-    protected $Nama_produk;
-    protected $Harga;
-    protected $Stok;
-    protected $GambarPath;
+    public $id;
+    public $Nama_produk;
+    public $Harga;
+    public $Stok;
+    public $GambarPath;
 
     public function __construct($id, $Nama_produk, $Harga, $Stok, $GambarPath) {
         $this->id = $id;
@@ -16,8 +16,13 @@ class Produk {
     }
 
     public function display() {
-        echo str_pad($this->id, 5) . str_pad($this->Nama_produk, 20) . str_pad($this->Harga, 10) .
-            str_pad($this->Stok, 5) . str_pad($this->GambarPath, 15);
+        printf("%-5s %-20s %-10.2f %-5d %-15s", 
+            $this->id, 
+            $this->Nama_produk, 
+            $this->Harga, 
+            $this->Stok, 
+            $this->GambarPath
+        );
     }
 
     public function getId() {
