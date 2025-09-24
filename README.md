@@ -1,6 +1,6 @@
 # Toko Elektronik - Program OOP Multilevel Inheritance
 
-## janji
+##
 Saya nama Rifky Fadhillah Akbar dengan Nim 2401248 mengerjakan tugas praktikum 1
 dalam mata kuliah DPBO untuk keberkahan-Nya maka saya
 tidak akan melakukan kecurangan seperti yang telah di spesifikasikan Aamiin.
@@ -19,7 +19,6 @@ Kelas **Produk** menyimpan atribut umum yang dimiliki oleh semua produk elektron
 #### Atribut:
 - **id**: ID unik untuk setiap produk.
 - **namaProduk**: Nama produk elektronik.
-- **merk**: Merek atau brand dari produk.
 - **harga**: Harga produk dalam satuan mata uang.
 - **stok**: Jumlah stok produk yang tersedia di toko.
 - **gambarPath**: Path atau lokasi gambar produk.
@@ -33,7 +32,6 @@ Kelas **Elektronik** mewarisi atribut dari **Produk** dan menambahkan atribut um
 #### Atribut yang diwarisi:
 - **id** (int)
 - **namaProduk** (string)
-- **merk** (string)
 - **harga** (float)
 - **stok** (int)
 - **gambarPath** (string)
@@ -49,7 +47,7 @@ Kelas **Elektronik** mewarisi atribut dari **Produk** dan menambahkan atribut um
 Kelas **ElektronikPortabel** adalah kelas turunan dari **Elektronik** dan menambahkan atribut khusus untuk produk yang bersifat **portabel** seperti ponsel, laptop, dan kamera.
 
 #### Atribut yang diwarisi:
-- **id**, **namaProduk**, **merk**, **harga**, **stok**, **gambarPath**, **deskripsi**, **kategori**
+- **id**, **namaProduk**, **harga**, **stok**, **gambarPath**, **deskripsi**, **kategori**
 
 #### Atribut tambahan:
 - **durasiBaterai**: Durasi penggunaan baterai perangkat dalam satuan jam.
